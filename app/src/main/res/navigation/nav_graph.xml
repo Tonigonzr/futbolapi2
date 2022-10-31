@@ -24,5 +24,17 @@
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_lv_futbol"
+            app:destination="@id/lv_futbol" />
+    </fragment>
+    <fragment
+        android:id="@+id/lv_futbol"
+        android:name="com.example.futbolapi.lv_futbol"
+        android:label="fragment_lv_futbol"
+        tools:layout="@layout/fragment_lv_futbol" >
+        <action
+            android:id="@+id/action_lv_futbol_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
     </fragment>
 </navigation>
