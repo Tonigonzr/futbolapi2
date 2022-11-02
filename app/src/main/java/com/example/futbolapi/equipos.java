@@ -10,6 +10,7 @@ public class equipos implements Serializable {
     private String presidente;
     private String estadio;
     private String imagen;
+    private String detailsURL;
 
     public Integer getId() {
         return id;
@@ -57,6 +58,14 @@ public class equipos implements Serializable {
 
     public void setImagen(String imagen) {
         this.imagen = imagen;
+    }
+
+    public String getDetailsURL() {
+        return detailsURL;
+    }
+
+    public void setDetailsURL(String detailsURL) {
+        this.detailsURL = detailsURL;
     }
 }
 

@@ -17,29 +17,22 @@ import java.util.List;
 
 public class Adaptador extends ArrayAdapter<equipos> {
 
-    public Adaptador(@NonNull Context context, int lw_futbol_row, int resource, List<equipos> ob) {
+    public Adaptador(@NonNull Context context, int resource, int lw_futbol_row, List<equipos> ob) {
         super(context, resource, ob);
     }
 
+    @Override
     public View getView(int pos, View converView, ViewGroup parent){
         equipos equipo = getItem(pos);
 
         if(converView == null){
             LayoutInflater inf = LayoutInflater.from(getContext());
-            converView = inf.inflate(R.layout.lw_futbol_row, parent,false);
+            converView = inf.inflate(R.layout.imagenynombre, parent,false);
         }
 
-        TextView txtEquipo = converView.findViewById(R.id.txtEquipo);
-        TextView txtFundacion = converView.findViewById(R.id.txtFundacion);
-        TextView txtPresidente = converView.findViewById(R.id.txtPresidente);
-        TextView txtEstadio = converView.findViewById(R.id.txtEstadio);
-        ImageView imgEquipo = converView.findViewById(R.id.img3esc);
-
+        TextView txtEquipo = converView.findViewById(R.id.txtnombre);
+        ImageView imgEquipo = converView.findViewById(R.id.imgfutbol);
         txtEquipo.setText(equipo.getNombre());
-        txtFundacion.setText(equipo.getFundacion());
-        txtPresidente.setText(equipo.getPresidente());
-        txtEstadio.setText(equipo.getEstadio());
-
         Glide.with(getContext()).load(equipo.getImagen()).into(imgEquipo);
 
         return converView;

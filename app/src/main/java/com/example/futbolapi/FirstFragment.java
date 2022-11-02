@@ -39,8 +39,7 @@ public class FirstFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
        binding.boton1.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_FirstFragment_to_SecondFragment));
 
-        }
-
+    };
 
     @Override
     public void onDestroyView() {
