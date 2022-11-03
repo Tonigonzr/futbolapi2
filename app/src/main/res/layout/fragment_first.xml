@@ -13,11 +13,12 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
         android:text="Entrar"
+        android:backgroundTint="#FF1234"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.251"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:cornerRadius="20dp"/>
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="470dp"
@@ -45,6 +46,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
         android:text="Cerrar"
+        android:backgroundTint="#FF1234"
+        app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ligas"
     tools:context=".lv_futbol">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,12 +24,12 @@
 
         <TextView
             android:id="@+id/txtnom"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imgequipo"
             app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imgequipo"
             app:layout_constraintTop_toBottomOf="@+id/imgequipo"
             app:layout_constraintVertical_bias="0.205" />
 
@@ -63,10 +64,10 @@
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="170dp"
-            android:layout_height="63dp"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="32dp"
+            android:layout_width="194dp"
+            android:layout_height="83dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
             android:src="@drawable/liga"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

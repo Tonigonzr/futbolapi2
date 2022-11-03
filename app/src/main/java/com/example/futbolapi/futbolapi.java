@@ -27,7 +27,7 @@ public class futbolapi extends SecondFragment{
                 equiposs.setNombre(futboljson.getString("nombre"));
                 equiposs.setImagen(futboljson.getString("imagenes"));
                 equipo.add(equiposs);
-                Log.e("zzzzzz", "hola");
+
             }
             return equipo;
         } catch (Exception ex) {

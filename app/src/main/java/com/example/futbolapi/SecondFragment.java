@@ -48,11 +48,12 @@ public class SecondFragment extends Fragment {
         );
 
         binding.lvfutbol.setAdapter(adapter);
-
         refresh();
-        binding.lvfutbol.setOnItemClickListener((adapterView, view1, i, l) -> {
-                equipos item = (equipos)adapterView.getItemAtPosition(i);
+        binding.lvfutbol.setOnItemClickListener((adapter, view1, i, l) -> {
+                equipos item = (equipos)adapter.getItemAtPosition(i);
+
                 Bundle datos = new Bundle();
+
                 datos.putSerializable("item", item);
 
                 NavHostFragment.findNavController(this).navigate(R.id.action_SecondFragment_to_lv_futbol);
