@@ -26,6 +26,9 @@ public class futbolapi extends SecondFragment{
 
                 equiposs.setNombre(futboljson.getString("nombre"));
                 equiposs.setImagen(futboljson.getString("imagenes"));
+                equiposs.setPresidente(futboljson.getString("presidente"));
+                equiposs.setEstadio(futboljson.getString("estadio"));
+                equiposs.setFundacion(futboljson.getString("fundacion"));
                 equipo.add(equiposs);
 
             }

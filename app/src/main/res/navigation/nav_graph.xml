@@ -26,15 +26,18 @@
             app:destination="@id/FirstFragment" />
         <action
             android:id="@+id/action_SecondFragment_to_lv_futbol"
-            app:destination="@id/lv_futbol" />
+            app:destination="@id/action_SecondFragment_to_futboldescripcion" />
+        <action
+            android:id="@+id/action_SecondFragment_to_futboldescripcion"
+            app:destination="@id/futboldescripcion" />
     </fragment>
     <fragment
-        android:id="@+id/lv_futbol"
-        android:name="com.example.futbolapi.lv_futbol"
-        android:label="fragment_lv_futbol"
-        tools:layout="@layout/fragment_lv_futbol" >
+        android:id="@+id/futboldescripcion"
+        android:name="com.example.futbolapi.futboldescripcion"
+        android:label="fragment_futboldescripcion"
+        tools:layout="@layout/fragment_futboldescripcion" >
         <action
-            android:id="@+id/action_lv_futbol_to_SecondFragment"
+            android:id="@+id/action_futboldescripcion_to_SecondFragment"
             app:destination="@id/SecondFragment" />
     </fragment>
 </navigation>

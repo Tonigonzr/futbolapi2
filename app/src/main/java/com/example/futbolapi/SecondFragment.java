@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -50,19 +51,18 @@ public class SecondFragment extends Fragment {
         binding.lvfutbol.setAdapter(adapter);
         refresh();
         binding.lvfutbol.setOnItemClickListener((adapter, view1, i, l) -> {
-                equipos item = (equipos)adapter.getItemAtPosition(i);
-
+                equipos equipo = (equipos)adapter.getItemAtPosition(i);
                 Bundle datos = new Bundle();
+                equipos  item = (equipos)adapter.getItemAtPosition(i);
+                datos.putSerializable("items", item);
 
-                datos.putSerializable("item", item);
-
-                NavHostFragment.findNavController(this).navigate(R.id.action_SecondFragment_to_lv_futbol);
+                NavHostFragment.findNavController(this).navigate(R.id.action_SecondFragment_to_futboldescripcion,datos);
         });
         super.onViewCreated(view, savedInstanceState);
     }
 
     public void refresh(){
-
+        Toast.makeText(getContext(), "Refrescando....", Toast.LENGTH_LONG).show();
         ExecutorService executor = Executors.newSingleThreadExecutor();
         Handler handler = new Handler(Looper.getMainLooper());
 
